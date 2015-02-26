@@ -37,6 +37,23 @@ RyMPI::containerWindow(Container c, MPI_Comm comm, MPI_Info info)
 
   return win;
 }
+  
+template<class T>
+MPI_Win
+RyMPI::pointerWindow(T *p, size_t N, MPI_Comm comm, MPI_Info info)
+{
+  MPI_Win win;
+
+  MPI_Win_create(
+      p,
+      N * sizeof(T),
+      sizeof(T),
+      info,
+      comm,
+      &win);
+
+  return win;
+}
 
 template<class T> MPI_Datatype mpitype(); 
 

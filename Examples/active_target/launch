@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mpiexec examples/active_target/at0 : examples/active_target/at1

@@ -33,6 +33,10 @@ namespace RyMPI
   MPI_Win 
   containerWindow(Container c, MPI_Comm comm, MPI_Info info = MPI_INFO_NULL);
 
+  template<class T>
+  MPI_Win
+  pointerWindow(T *p, size_t N, MPI_Comm comm, MPI_Info info = MPI_INFO_NULL);
+
   template<class Iter>
   void
   containerGet(Iter begin, Iter end, int tgt, size_t tgt_off, MPI_Win win);
