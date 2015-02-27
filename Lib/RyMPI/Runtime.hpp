@@ -96,7 +96,7 @@ RyMPI::scalarGet(T *s, int tgt, size_t tgt_off, MPI_Win win)
 {
   MPI_Datatype ty = mpitype<decltype(T{})>();
   MPI_Get(
-    &s,
+    s,
     1,
     ty,
     tgt,
