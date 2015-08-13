@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(RyMPI3)
+set(CMAKE_C_COMPILER /usr/bin/clang)
+set(CMAKE_CXX_COMPILER /usr/bin/clang++)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
   -std=c++1y -stdlib=libc++ -g -O3 \
   -Wall -Wextra \
@@ -9,7 +11,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} \
 include_directories(Lib)
 include_directories(/usr/local/include)
 
-add_subdirectory(examples)
+add_subdirectory(Examples)
 
 install(DIRECTORY lib/RyMPI 
   DESTINATION /usr/local/include

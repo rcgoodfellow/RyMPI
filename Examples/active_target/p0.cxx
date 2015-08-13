@@ -1,4 +1,4 @@
-#include <RyMPI/runtime.hxx>
+#include <RyMPI/Runtime.hxx>
 #include <iostream>
 #include <array>
 #include <fstream>
