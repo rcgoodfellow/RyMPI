@@ -13,7 +13,7 @@ include_directories(/usr/local/include)
 
 add_subdirectory(Examples)
 
-install(DIRECTORY lib/RyMPI 
+install(DIRECTORY Lib/RyMPI 
   DESTINATION /usr/local/include
   FILES_MATCHING 
   PATTERN "*.hxx"
